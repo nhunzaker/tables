@@ -9,18 +9,42 @@
     "Billy",
     10,
     60,
-    "=where(./static/pets.json, Owner, Billy, Name)"
+    {
+      "formula": "where",
+      "params": {
+        "src": "./static/pets.json",
+        "key": "Owner",
+        "value": "Billy",
+        "pluck": "Name"
+      }
+    }
   ],
   [
     "Sam",
     20,
     160,
-    "=where(./static/pets.json, Owner, Sam, Name)"
+    {
+      "formula": "where",
+      "params": {
+        "src": "./static/pets.json",
+        "key": "Owner",
+        "value": "Sam",
+        "pluck": "Name"
+      }
+    }
   ],
   [
     "Mary",
     27,
     110,
-    "=where(./static/pets.json, Owner, Mary, Name)"
+    {
+      "formula": "where",
+      "params": {
+        "src": "./static/pets.json",
+        "key": "Owner",
+        "value": "Mary",
+        "pluck": "Name"
+      }
+    }
   ]
 ]

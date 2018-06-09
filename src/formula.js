@@ -1,9 +1,7 @@
 import { request } from './request.js'
 
-const pattern = /^\=(\w+?)\((.+?)\)$/
-
-function where(data, key, value, pluck) {
-  let [head, ...rows] = data
+async function where({ src, key, value, pluck }) {
+  let [head, ...rows] = await request(src)
 
   let index = head.indexOf(key)
   let pluckIndex = head.indexOf(pluck)
@@ -18,16 +16,15 @@ function where(data, key, value, pluck) {
 }
 
 export async function query(value) {
-  if (pattern.test(value) === false) {
+  if (!value || typeof value !== 'object') {
     return value
   }
 
-  let [_, formula, args] = value.match(pattern)
+  let { formula, params } = value
 
   switch (formula) {
     case 'where':
-      let [src, ...params] = args.split(',').map(string => string.trim())
-      return where(await request(src), ...params)
+      return where(params)
     default:
       return `UNKNOWN: ${formula}`
   }
