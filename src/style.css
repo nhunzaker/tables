@@ -62,3 +62,9 @@ th {
 tr:hover td {
   background: #eee;
 }
+
+pre {
+  font-size: 14px;
+  line-height: 1;
+  margin: 24px;
+}

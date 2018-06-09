@@ -18,8 +18,12 @@ export class Table {
     this.src = src
   }
 
+  read() {
+    return request(this.src)
+  }
+
   async render() {
-    let [head, ...rows] = await request(this.src)
+    let [head, ...rows] = await this.read()
 
     let thead = this.el.createTHead().insertRow()
     let tbody = this.el.createTBody()
