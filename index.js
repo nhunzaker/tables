@@ -7,7 +7,7 @@ document.body.appendChild(table.el)
 document.body.appendChild(source)
 
 table.read().then(data => {
-  source.innerHTML = JSON.stringify(data, null, 4)
+  source.innerHTML = JSON.stringify(data, null, 2)
 })
 
 table.render()
