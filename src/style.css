@@ -1,0 +1,64 @@
+html {
+  background: white;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #223;
+  font: 300 16px/1.6 '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  height: 100%;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 0.25em;
+  margin-top: 0;
+}
+
+a:link,
+a:visited {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+thead {
+  font-weight: 500;
+}
+
+table {
+  border: 1px solid #d9d9d9;
+  border-collapse: collapse;
+  margin: 24px;
+}
+
+td,
+th {
+  border: 1px solid #d9d9d9;
+  transition: 0.3s all;
+  padding: 8px 12px;
+}
+
+tr:hover td {
+  background: #eee;
+}
