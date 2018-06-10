@@ -1,11 +1,12 @@
 # tables.sh
 
-Work in progress prototype.
+Work in progress prototype (and a total hack)
 
 ## Setup
 
 ```
-./bin/serve
+brew install q
+yarn start
 ```
 
 Then open `http://localhost:3000`.

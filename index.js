@@ -1,6 +1,6 @@
-import { Table } from './src/table.js'
+import { Table, Cell } from './src/table.js'
 
-let table = new Table('./static/people.json')
+let table = new Table('./static/people.csv')
 let source = document.createElement("pre")
 
 document.body.appendChild(table.el)

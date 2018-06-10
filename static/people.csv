@@ -1,0 +1,4 @@
+Name, Age, Pets
+Billy, 43, ?select=Name&from=pets&where=Owner\='Billy'
+Sally, 20, ?select=Name&from=pets&where=Owner\='Sally'
+Mary, 29, ?select=Name&from=pets&where=Owner\='Mary'
